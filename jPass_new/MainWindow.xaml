@@ -1,0 +1,35 @@
+﻿<Window x:Class="jPass_new.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:jPass_new"
+        mc:Ignorable="d"
+        Title="Autorization" Height="428" Width="386" Loaded="Window_Loaded" Icon="jpData/auth-logo.png">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="47*"/>
+            <RowDefinition Height="56*"/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="17*"/>
+            <ColumnDefinition Width="359*"/>
+            <ColumnDefinition Width="10*"/>
+        </Grid.ColumnDefinitions>
+        <PasswordBox x:Name="mpEnter_pb" Margin="104,79,104,0" VerticalAlignment="Top" FontSize="18" Grid.Column="1"/>
+        <PasswordBox x:Name="mpRepeat_pb" Margin="104,144,104,0" VerticalAlignment="Top" FontSize="18" Grid.Column="1" />
+
+        <Label x:Name="header_lb" Content="Log in jointPass" FontSize="18" FontWeight="Bold" Foreground="Firebrick"  Grid.Column="1" Width="359" VerticalAlignment="Top"  HorizontalContentAlignment="Center" Height="47"/>
+        <Label x:Name="mpEnter_lb" Content="Enter master pass" Margin="0,48,0,0" VerticalAlignment="Top" FontSize="16" Grid.Column="1" HorizontalContentAlignment="Center"/>
+        <Label x:Name="mpRepeat_lb" Content="Repeat master pass" Margin="0,110,0,0" VerticalAlignment="Top" FontSize="16" Grid.Column="1" HorizontalContentAlignment="Center"/>
+        <RadioButton x:Name="lang_rb1" Grid.Column="1" Content="English" HorizontalAlignment="Left" Margin="98,6,0,0" VerticalAlignment="Top" Height="25" Width="70" FontWeight="Bold" Checked="lang_rb1_Checked" Grid.Row="1"/>
+        <RadioButton x:Name="lang_rb" Grid.Column="1" Content="Русский" HorizontalAlignment="Left" Margin="200,6,0,0" VerticalAlignment="Top" Height="25" Width="70" FontWeight="Bold" Checked="lang_rb_Checked" Grid.Row="1"/>
+        <Label x:Name="error_lb" Content="no error" Margin="37,34,43,0" VerticalAlignment="Top" RenderTransformOrigin="1.114,10.836" Grid.Column="1" Grid.Row="1" Background="#FF8A0B0B" Foreground="#FFEDE8E8" FontSize="14" FontWeight="Bold"/>
+        <Button x:Name="selectDir_bt" Content="SelectDir" Margin="265,76,43,0" VerticalAlignment="Top" Click="Button_Click" Grid.Column="1" Grid.Row="1"/>
+        <Label x:Name="dtdir_lb" Grid.Column="1" Content="data_dir:" Margin="37,65,110,0" VerticalAlignment="Top" FontSize="16" Grid.Row="1"/>
+        <TextBox x:Name="data_dir_tb" Grid.Column="1" Margin="37,101,43,0" TextWrapping="Wrap" Text="not specified" VerticalAlignment="Top" RenderTransformOrigin="0.5,0.5" Grid.Row="1">
+        </TextBox>
+        <CheckBox x:Name="changePass_chb" Grid.Column="1" Content="change password" HorizontalAlignment="Left" Margin="20,0,0,50" VerticalAlignment="Bottom" IsChecked="False" Grid.Row="1"/>
+        <Button x:Name="submit_btn" Content="Submit" Margin="0,0,29,41" FontSize="16" FontWeight="Bold" Grid.Column="1" Click="Button_Click_1" Height="27" VerticalAlignment="Bottom" HorizontalAlignment="Right" Width="70" IsDefault="True" Grid.Row="1"/>
+    </Grid>
+</Window>
